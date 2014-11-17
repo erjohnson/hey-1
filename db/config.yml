@@ -1,9 +1,9 @@
 development:
   adapter: postgresql
-  database: app_name_development
+  database: hey_app_development
   host: localhost
 
 test:
   adapter: postgresql
-  database: app_name_test
+  database: hey_app_test
   host: localhost
