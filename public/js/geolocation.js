@@ -12,7 +12,6 @@ var getLocation = function() {
 var geolocationCallback = function(location) {
   current_lat = location.coords.latitude;
   current_lon = location.coords.longitude;
-  React.render(app, document.body);
   console.log("Retrieved user's location: [" + current_lat + ", " + current_lon + "]");
 };
 var errorHandler = function(error) {

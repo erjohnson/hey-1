@@ -8,8 +8,9 @@ Messages.define do
     on get do
       on param('latitude'), param('longitude') do |lat, lon|
         position = [lat.to_f, lon.to_f]
-        messages = Message.near(position, 1, units: :km).order('created_at')
+        messages = Message.order('created_at DESC').near(position, 1, units: :km)
         res.write Oj.dump(messages, mode: :compat)
+        puts Oj.dump(res)
       end
     end
     on post do
